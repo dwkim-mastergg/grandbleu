@@ -14,7 +14,7 @@ use Carbon\Carbon;
 class User extends Authenticatable
 {
     use Notifiable;
-    
+
     protected $dates = ['today_login', 'email_certify', 'nick_date', 'open_date', ];
 
     /**
@@ -356,7 +356,7 @@ class User extends Authenticatable
             'tel' => cleanXssTags($request->tel),
             'addr1' => cleanXssTags($request->addr1),
             'addr2' => cleanXssTags($request->addr2),
-            'zip' => preg_replace('/[^0-9]/', '', $request->zip),
+            'zip' => preg_replace('/[^0\-9]/', '', $request->zip),
             'signature' => trim($request->signature),
             'profile' => trim($request->profile),
             'memo' => trim($request->memo),

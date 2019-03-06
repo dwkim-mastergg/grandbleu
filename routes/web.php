@@ -49,7 +49,7 @@ Route::post('logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout'
 Route::get('auth/remind', ['as' => 'remind.create', 'uses' => 'Auth\PasswordsController@getRemind']);
 Route::post('auth/remind', ['as' => 'remind.store', 'uses' => 'Auth\PasswordsController@postRemind']);
 Route::get('auth/reset/{token}', ['as' => 'reset.create', 'uses' => 'Auth\PasswordsController@getReset'])
-    ->where('token', '[\pL-\pN]{64}');
+    ->where('token', '[\pL\-\pN]{64}');
 Route::post('auth/reset', ['as' => 'reset.store', 'uses' => 'Auth\PasswordsController@postReset']);
 
 // 소셜 로그인 - 콜백 함수에서 회원 로그인 여부로 분기 (콜백함수 경로 지정은 config/services.php 에서)
@@ -88,7 +88,7 @@ Route::group(['middleware' => ['web'], 'prefix' => 'bbs/{boardName}'], function(
     // 글 목록 + 검색
     Route::get('', ['as' => 'board.index', 'uses' => 'WritesController@index'])
         ->middleware(['level.board:list_level', 'valid.board'])
-        ->where('boardName', '[a-zA-Z0-9_]+');
+        ->where('boardName', '[a\-zA\-Z0\-9_]+');
     // 글 읽기
     Route::get('views/{writeId}', ['as' => 'board.view', 'uses' => 'WritesController@view'])
         ->middleware('level.board:read_level', 'valid.board', 'valid.write', 'comment.view.parent', 'secret.board');

@@ -842,6 +842,7 @@ if (! function_exists('convertContent')) {
 if (! function_exists('urlAutoLink')) {
     function urlAutoLink($str)
     {
+
         $target = cache("config.board")->linkTarget;
 
         $str = str_replace(array("&lt;", "&gt;", "&amp;", "&quot;", "&nbsp;", "&#039;"), array("\t_lt_\t", "\t_gt_\t", "&", "\"", "\t_nbsp_\t", "'"), $str);
@@ -981,14 +982,14 @@ if (! function_exists('utf8Strcut')) {
     function utf8Strcut($str, $size, $suffix='...' )
     {
             $substr = substr( $str, 0, $size * 2 );
-            $multiSize = preg_match_all( '/[\x80-\xff]/', $substr, $multiChars );
+            $multiSize = preg_match_all( '/[\x80\-\xff]/', $substr, $multiChars );
 
             if ( $multiSize > 0 )
                 $size = $size + intval( $multiSize / 3 ) - 1;
 
             if ( strlen( $str ) > $size ) {
                 $str = substr( $str, 0, $size );
-                $str = preg_replace( '/(([\x80-\xff]{3})*?)([\x80-\xff]{0,2})$/', '$1', $str );
+                $str = preg_replace( '/(([\x80\-\xff]{3})*?)([\x80\-\xff]{0,2})$/', '$1', $str );
                 $str .= $suffix;
             }
 

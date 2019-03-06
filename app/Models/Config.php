@@ -44,7 +44,7 @@ class Config extends Model
         }
 
         // 비밀번호 규칙 정규식 조합
-        $ruleString = '/^(?=.*[a-z])' . implode($rulePieces) . '.{' . $config->passwordPolicyDigits . ',}/';
+        $ruleString = '/^(?=.*[a\-z])' . implode($rulePieces) . '.{' . $config->passwordPolicyDigits . ',}/';
 
         array_push($ruleArr,  'regex:' . $ruleString);
 

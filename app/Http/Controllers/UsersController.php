@@ -122,10 +122,10 @@ class UsersController extends Controller
             $rules = array_add($rules, 'homepage', 'regex:'. config('laon.URL_REGEX'). '|nullable');
         }
         if($this->config->tel) {
-            $rules = array_add($rules, 'tel', 'regex:/^[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}$/|nullable');
+            $rules = array_add($rules, 'tel', 'regex:/^[0-9]{2,3}\-[0-9]{3,4}\-[0-9]{4}$/|nullable');
         }
         if($this->config->hp) {
-            $rules = array_add($rules, 'hp', 'regex:/^[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}$/|nullable');
+            $rules = array_add($rules, 'hp', 'regex:/^[0-9]{2,3}\-[0-9]{3,4}\-[0-9]{4}$/|nullable');
         }
         if($this->config->addr) {
             $rules = array_add($rules, 'addr1', 'nullable');

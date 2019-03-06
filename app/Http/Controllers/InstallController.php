@@ -38,10 +38,11 @@ class InstallController extends Controller
 
     public function form(Request $request)
     {
+        /*
         $agree = session()->get('agree_'. session()->get('_token'));
         if(!$agree || $agree != 'yes') {
             abort('500', '라이센스(License) 내용에 동의하셔야 설치를 계속하실 수 있습니다.');
-        }
+        }*/
 
         return view('install.form');
     }
