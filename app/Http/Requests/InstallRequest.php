@@ -25,12 +25,12 @@ class InstallRequest extends FormRequest
     {
         return [
             'appUrl' => 'required|regex:'. config('laon.URL_REGEX'),
-            'mysqlHost' => 'required|regex:/^[a\-zA\-Z0\-9.]+$/',
+            'mysqlHost' => 'required|regex:/^[a-zA-Z0-9.]+$/',
             'mysqlPort' => 'required|numeric',
-            'mysqlDb' => 'required|regex:/^[a\-zA\-Z0\-9_]+$/',
-            'mysqlUser' => 'required|regex:/^[a\-zA\-Z0\-9_]+$/',
+            'mysqlDb' => 'required|regex:/^[a-zA-Z0-9_]+$/',
+            'mysqlUser' => 'required|regex:/^[a-zA-Z0-9_]+$/',
             'mysqlPass' => 'required',
-            'tablePrefix' => 'required|regex:/^[a\-z][a\-z0\-9_]+$/',
+            'tablePrefix' => 'required|regex:/^[a-z][a-z0-9_]+$/',
             'adminEmail' => 'required|email|max:255',
             'adminPass' => 'required',
             'adminNick' => 'required|nick_length:2,4',

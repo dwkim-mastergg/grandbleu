@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 /* common */
 a {
@@ -469,7 +469,7 @@ input[type=radio] {
 #body_tab_type2 ul li.tab {
 	font-weight: bold;
 }
-#body_tab_type2 ul li.tab:hover { 
+#body_tab_type2 ul li.tab:hover {
 	background: #e8e8e8;
 	-webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -540,7 +540,7 @@ input[type=radio] {
 	background: #fff;
 	padding: 0 10px;
 }
-#body_tab_type2.f-tab ul li.tab:hover { 
+#body_tab_type2.f-tab ul li.tab:hover {
 	background: #fff !important;
 }
 #body_tab_type2 .submit_btn {
@@ -575,7 +575,7 @@ input[type=radio] {
 	font-size: 13px;
 }
 .adm_box_close {
-	float: right; 
+	float: right;
 	color: #fff;
 	font-size: 12px;
 	line-height: 20px;
@@ -622,7 +622,7 @@ input[type=radio] {
 	clear: both;
 }
 .adm_box_table tr .table_body .usericon {
-	margin-bottom: 10px;	
+	margin-bottom: 10px;
 }
 .adm_box_table tr .table_body .usericon .usericon_img {
 	display: inline-block;
@@ -1015,7 +1015,7 @@ input[type=radio] {
 	clear: both;
 }
 #adm_sch select {
-	height:34px; padding:6px; border: 1px solid #ccc; 
+	height:34px; padding:6px; border: 1px solid #ccc;
 	font-size: 13px; margin-right: 5px;
 }
 #adm_sch .search {
@@ -1129,7 +1129,7 @@ input[type=radio] {
     width: 120px;
     top: 0;
     left: 110%;
-	 
+
 	position: absolute;
 	z-index: 1;
 }
@@ -1157,9 +1157,9 @@ input[type=radio] {
 
     width: 120px;
     bottom: 130%;
-	left: 50%; 
+	left: 50%;
 	margin-left: -60px;
-	 
+
 	position: absolute;
 	z-index: 1;
 }
