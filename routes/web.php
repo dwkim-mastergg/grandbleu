@@ -88,7 +88,7 @@ Route::group(['middleware' => ['web'], 'prefix' => 'bbs/{boardName}'], function(
     // 글 목록 + 검색
     Route::get('', ['as' => 'board.index', 'uses' => 'WritesController@index'])
         ->middleware(['level.board:list_level', 'valid.board'])
-        ->where('boardName', '[a\-zA\-Z0\-9_]+');
+        ->where('boardName', '[a-zA-Z0-9_]+');
     // 글 읽기
     Route::get('views/{writeId}', ['as' => 'board.view', 'uses' => 'WritesController@view'])
         ->middleware('level.board:read_level', 'valid.board', 'valid.write', 'comment.view.parent', 'secret.board');
